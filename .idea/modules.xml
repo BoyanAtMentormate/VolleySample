@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/VolleySample/VolleySample.iml" filepath="$PROJECT_DIR$/VolleySample/VolleySample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VolleySampleProject.iml" filepath="$PROJECT_DIR$/VolleySampleProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VolleySimpleSample/VolleySimpleSample.iml" filepath="$PROJECT_DIR$/VolleySimpleSample/VolleySimpleSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/volley/tests/tests.iml" filepath="$PROJECT_DIR$/volley/tests/tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/volley/volley.iml" filepath="$PROJECT_DIR$/volley/volley.iml" />
+    </modules>
+  </component>
+</project>
+
