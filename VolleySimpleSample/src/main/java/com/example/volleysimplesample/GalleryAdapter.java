@@ -1,15 +1,18 @@
 package com.example.volleysimplesample;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.NetworkImageView;
 import com.example.volleysimplesample.cmn.Result;
@@ -21,12 +24,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GalleryAdapter extends BaseAdapter {
-	private Context mContext;
-	private List<Result> mOriginalList;
-    private boolean mUseNetworkImageView = true;
-    private static final int MAX_IMAGES_PER_LOAD = 3;
-    private int start = 0;
-    private static final String base_url = "https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=android";
+    private Context mContext;
+    private List<Result> mOriginalList;
+    private int mStartAtResultPage = 0;
 
     public GalleryAdapter(Context context, List<Result> list) {
 		mOriginalList = new ArrayList<Result>();
@@ -36,8 +36,8 @@ public class GalleryAdapter extends BaseAdapter {
 	}
 
     public void loadMoreData() {
-        start += 4;
-        String url = base_url + "&start=" + start;
+        mStartAtResultPage += 4;
+        String url = Constants.BASE_URL + "&start=" + mStartAtResultPage;
         VolleyApp.getRequestQueue().add(new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
@@ -61,15 +61,10 @@ public class GalleryAdapter extends BaseAdapter {
 		return mContext;
 	}
 
-    public void clear() {
-        mOriginalList.clear();
-        notifyDataSetChanged();
-    }
-
-	@Override
-	public int getCount() {
-		if (mOriginalList == null) {
-			return 0;
+    @Override
+    public int getCount() {
+        if (mOriginalList == null) {
+            return 0;
 		} else {
 			return mOriginalList.size();
 		}
@@ -124,12 +119,18 @@ public class GalleryAdapter extends BaseAdapter {
 
         Result result = mOriginalList.get(position);
 
-		if(result != null && mUseNetworkImageView){
-			viewHolder.thumbnail.setImageUrl(result.tbUrl, VolleyApp.getImageLoader());
-			viewHolder.description.setText(result.titleNoFormatting);
-		} else {
-            ((VolleyActivity) getContext()).requestImage(viewHolder.thumbnail, result.tbUrl, mOriginalList.size());
+        viewHolder.thumbnail.setDefaultImageResId(android.R.drawable.ic_menu_gallery);
+        viewHolder.thumbnail.setErrorImageResId(android.R.drawable.ic_menu_delete);
+
+        if (result != null) {
+            if (Constants.USER_NETWORK_IMAGE_VIEWS) {
+                viewHolder.thumbnail.setImageUrl(result.tbUrl, VolleyApp.getImageLoader());
+            } else {
+                requestImage(viewHolder.thumbnail, result.tbUrl);
+            }
         }
+
+        viewHolder.description.setText(result.titleNoFormatting);
 
         if(closeToEnd(position)) {
             loadMoreData();
@@ -137,6 +138,24 @@ public class GalleryAdapter extends BaseAdapter {
 
 		return v;
 	}
+
+    public void requestImage(final ImageView niv, final String imgUrl) {
+        ImageRequest request = new ImageRequest(imgUrl, new Response.Listener<Bitmap>() {
+            @Override
+            public void onResponse(Bitmap bm) {
+                niv.setImageBitmap(bm);
+                niv.invalidate();
+            }
+        }, 0, 0, Bitmap.Config.ARGB_8888, new Response.ErrorListener() {
+            public void onErrorResponse(VolleyError volleyError) {
+                volleyError.printStackTrace();
+            }
+        }
+        );
+
+        request.setTag(Constants.IMAGE_TAG);
+        VolleyApp.getRequestQueue().add(request);
+    }
 
     private boolean shouldLoadData(long position) {
         if(mOriginalList.size() - 1 >= position)
@@ -146,7 +165,7 @@ public class GalleryAdapter extends BaseAdapter {
     }
 
     private boolean closeToEnd(long position) {
-        int max = start < 1 ? MAX_IMAGES_PER_LOAD : start;
+        int max = mStartAtResultPage < 1 ? Constants.MAX_IMAGES_PER_LOAD : mStartAtResultPage;
         if(position == max && shouldLoadData(position)) {
             return true;
         } else {

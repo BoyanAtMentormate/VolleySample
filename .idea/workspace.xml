@@ -21,6 +21,14 @@
         <option name="packageNamePattern" value="" />
         <option name="pid" value="" />
       </filter>
+      <filter>
+        <option name="logLevel" value="verbose" />
+        <option name="logMessagePattern" value="" />
+        <option name="logTagPattern" value="Volley" />
+        <option name="name" value="Volley" />
+        <option name="packageNamePattern" value="" />
+        <option name="pid" value="" />
+      </filter>
     </filters>
   </component>
   <component name="AndroidLayoutPreviewToolWindow">
@@ -33,15 +41,15 @@
       <config />
     </shared>
   </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="MemoryCache" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e995058-3b07-48b5-8b30-9e4fda564ce9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/volley/tests/tests.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/volley/volley.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/project.properties" afterPath="$PROJECT_DIR$/volley/project.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/tests/project.properties" afterPath="$PROJECT_DIR$/volley/tests/project.properties" />
+    <list default="true" id="9e995058-3b07-48b5-8b30-9e4fda564ce9" name="Default" comment="mainly externalized some constants for tidiness">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley" afterPath="$PROJECT_DIR$/volley" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/GalleryAdapter.java" afterPath="$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/GalleryAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/VolleyActivity.java" afterPath="$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/VolleyActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/VolleyApp.java" afterPath="$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/VolleyApp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="VolleySample.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -95,69 +103,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/GalleryAdapter.java" line="149" class="com.example.volleysimplesample.GalleryAdapter" package="com.example.volleysimplesample">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/VolleyActivity.java" line="77" class="com.example.volleysimplesample.VolleyActivity" package="com.example.volleysimplesample">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/VolleyApp.java" line="55" class="com.example.volleysimplesample.VolleyApp" package="com.example.volleysimplesample">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/VolleyApp.java" line="68" class="com.example.volleysimplesample.VolleyApp$2" package="com.example.volleysimplesample">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/VolleyApp.java" line="79" class="com.example.volleysimplesample.VolleyApp$2" package="com.example.volleysimplesample">
+      <breakpoint url="file://$PROJECT_DIR$/volley/src/com/android/volley/toolbox/ImageRequest.java" line="137" class="com.android.volley.toolbox.ImageRequest" package="com.android.volley.toolbox">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -173,6 +120,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -185,11 +133,43 @@
       <file leaf-file-name="GalleryAdapter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/GalleryAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="147" column="47" selection-start="4248" selection-end="4248" vertical-scroll-proportion="0.53367877" vertical-offset="1959" max-vertical-offset="2538">
+            <state line="132" column="65" selection-start="4003" selection-end="4003" vertical-scroll-proportion="0.5198618" vertical-offset="1589" max-vertical-offset="2772">
               <folding>
-                <element signature="e#1365#1900#0" expanded="true" />
-                <element signature="e#1889#1890#0" expanded="true" />
+                <element signature="e#4224#4425#0" expanded="true" />
+                <element signature="e#4414#4415#0" expanded="true" />
+                <element signature="e#4458#4626#0" expanded="true" />
+                <element signature="e#4615#4616#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageRequest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/volley/src/com/android/volley/toolbox/ImageRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="128" column="57" selection-start="5183" selection-end="5183" vertical-scroll-proportion="0.0" vertical-offset="1611" max-vertical-offset="3492">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list_item_photo_gallery.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/VolleySample/src/main/res/layout/list_item_photo_gallery.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="4" selection-start="202" selection-end="202" vertical-scroll-proportion="-3.2142856" vertical-offset="0" max-vertical-offset="522">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VolleyApp.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/VolleyApp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="88" column="54" selection-start="3050" selection-end="3050" vertical-scroll-proportion="0.0" vertical-offset="1157" max-vertical-offset="1944">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -197,10 +177,20 @@
       <file leaf-file-name="VolleyActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/VolleyActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="51" selection-start="3741" selection-end="3741" vertical-scroll-proportion="0.0" vertical-offset="1172" max-vertical-offset="2502">
+            <state line="51" column="12" selection-start="1702" selection-end="1702" vertical-scroll-proportion="0.0" vertical-offset="347" max-vertical-offset="1728">
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#2452#3056#0" expanded="true" />
+                <element signature="e#3045#3046#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Constants.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="0" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -211,6 +201,9 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitLogSettings">
     <option name="myDateState">
@@ -264,21 +257,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/VolleySimpleSample/src/main/res/anim/refresh_rotate.xml" />
-        <option value="$PROJECT_DIR$/VolleySimpleSample/src/main/res/layout/actionbar_refresh.xml" />
-        <option value="$PROJECT_DIR$/VolleySimpleSample/src/main/res/menu/volley.xml" />
-        <option value="$PROJECT_DIR$/VolleySimpleSample/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/cmn/result.java" />
         <option value="$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/cmn/ResponseData.java" />
         <option value="$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/cmn/SearchResponse.java" />
         <option value="$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/cmn/Result.java" />
         <option value="$PROJECT_DIR$/volley/src/com/android/volley/toolbox/JsonObjectRequest.java" />
         <option value="$PROJECT_DIR$/VolleySimpleSample/src/main/res/layout/activity_volley.xml" />
-        <option value="$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/GalleryAdapter.java" />
         <option value="$PROJECT_DIR$/VolleySimpleSample/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/VolleySimpleSample/build.gradle" />
         <option value="$PROJECT_DIR$/VolleySample/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/VolleySample/src/main/res/layout/list_item_photo_gallery.xml" />
         <option value="$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/VolleyApp.java" />
+        <option value="$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/Consts.java" />
+        <option value="$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/Consants.java" />
+        <option value="$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/Constants.java" />
+        <option value="$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/GalleryAdapter.java" />
         <option value="$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/VolleyActivity.java" />
       </list>
     </option>
@@ -289,7 +282,7 @@
     <option name="width" value="1922" />
     <option name="height" value="1054" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -315,6 +308,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -402,7 +396,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -413,7 +406,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="last_opened_file_path" value="$USER_HOME$/Develop/Android/libs/volley" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="HT0B3RM06990" />
@@ -423,8 +416,8 @@
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -436,6 +429,9 @@
       <recent name="$PROJECT_DIR$/VolleySimpleSample/libs" />
       <recent name="$PROJECT_DIR$/VolleySample/src/main/res/layout" />
       <recent name="$PROJECT_DIR$/VolleySample/libs" />
+    </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="com.example.volleysimplesample.Consts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -625,36 +621,59 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.6004415" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39955848" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39955848" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289183" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289183" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3289183" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3289183" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289183" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289183" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22838847" sideWeight="0.67108166" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.67108166" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39955848" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -698,11 +717,11 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="mainly externalized some constants for tidiness" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
     <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
     <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
@@ -712,130 +731,126 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="mainly externalized some constants for tidyness" />
+    <MESSAGE value="mainly externalized some constants for tidiness" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Develop/Android/sdk/sources/android-17/android/util/LruCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="13" selection-start="2626" selection-end="2626" vertical-scroll-proportion="-3.5751295" vertical-offset="2970" max-vertical-offset="6876">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VolleySample/src/main/java/com/example/volleysample/images/BitmapLruImageCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="276" selection-end="276" vertical-scroll-proportion="0.22279793" vertical-offset="51" max-vertical-offset="738">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VolleySample/src/main/java/com/example/volleysample/request/CustomHeadersParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="248" selection-end="248" vertical-scroll-proportion="-0.15544042" vertical-offset="216" max-vertical-offset="918">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VolleySample/src/main/java/com/example/volleysample/request/CustomRetryPolicy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="143" selection-end="143" vertical-scroll-proportion="0.21761657" vertical-offset="0" max-vertical-offset="579">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VolleySample/src/main/java/com/example/volleysample/request/HeaderRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="435" selection-end="435" vertical-scroll-proportion="0.12435233" vertical-offset="0" max-vertical-offset="684">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/volley/src/com/android/volley/Cache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="24" selection-start="2215" selection-end="2215" vertical-scroll-proportion="0.4265976" vertical-offset="869" max-vertical-offset="1584">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/volley/src/com/android/volley/toolbox/ImageLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="21" selection-start="2927" selection-end="2927" vertical-scroll-proportion="-3.0241797" vertical-offset="2579" max-vertical-offset="8028">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VolleySample/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="65" selection-start="364" selection-end="364" vertical-scroll-proportion="0.31088084" vertical-offset="0" max-vertical-offset="648">
-          <folding>
-            <element signature="e#485#503#0" expanded="false" />
-            <element signature="e#688#706#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VolleySimpleSample/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="32" selection-start="260" selection-end="260" vertical-scroll-proportion="0.21761657" vertical-offset="0" max-vertical-offset="648">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Develop/Android/sdk/extras/android/m2repository/com/android/support/support-v4/13.0.0/support-v4-13.0.0.jar!/android/support/v4/util/LruCache.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="11" selection-start="435" selection-end="435" vertical-scroll-proportion="0.48736462" vertical-offset="0" max-vertical-offset="1044">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/VolleySample/src/main/java/com/example/volleysample/images/ImageCacheManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="23" selection-start="1837" selection-end="1848" vertical-scroll-proportion="0.16062176" vertical-offset="1059" max-vertical-offset="2340">
-          <folding />
-        </state>
+        <state line="71" column="23" selection-start="1837" selection-end="1848" vertical-scroll-proportion="0.16062176" vertical-offset="1059" max-vertical-offset="2340" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VolleySample/src/main/java/com/example/volleysample/images/DiskLruImageCache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="13" selection-start="1641" selection-end="1641" vertical-scroll-proportion="-0.21761657" vertical-offset="594" max-vertical-offset="2916">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/VolleyApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="13" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.77720207" vertical-offset="486" max-vertical-offset="2412">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1256#1272#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="42" column="13" selection-start="1641" selection-end="1641" vertical-scroll-proportion="-0.21761657" vertical-offset="594" max-vertical-offset="2916" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Develop/Android/sdk/sources/android-17/android/view/MenuItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="17" selection-start="1317" selection-end="1317" vertical-scroll-proportion="0.33333334" vertical-offset="167" max-vertical-offset="10548">
+        <state line="38" column="17" selection-start="1317" selection-end="1317" vertical-scroll-proportion="0.33333334" vertical-offset="167" max-vertical-offset="10548" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/volley/src/com/android/volley/toolbox/NetworkImageView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="13" selection-start="1113" selection-end="1113" vertical-scroll-proportion="-1.0951456" vertical-offset="726" max-vertical-offset="3294">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/volley/src/com/android/volley/Response.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="27" selection-start="956" selection-end="956" vertical-scroll-proportion="0.4893204" vertical-offset="0" max-vertical-offset="1386">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Develop/Android/sdk/sources/android-17/java/lang/Override.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="18" selection-start="1303" selection-end="1303" vertical-scroll-proportion="0.52427185" vertical-offset="0" max-vertical-offset="515">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Develop/Android/sdk/sources/android-17/android/widget/ImageView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="13" selection-start="2238" selection-end="2238" vertical-scroll-proportion="0.33203885" vertical-offset="225" max-vertical-offset="20952">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/volley/src/com/android/volley/VolleyLog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="41" selection-start="1324" selection-end="1324" vertical-scroll-proportion="0.52427185" vertical-offset="108" max-vertical-offset="2934">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/volley/src/com/android/volley/CacheDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="0" selection-start="4274" selection-end="4274" vertical-scroll-proportion="0.33203885" vertical-offset="1665" max-vertical-offset="2628">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VolleySample/src/main/res/layout/list_item_photo_gallery.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="4" selection-start="202" selection-end="202" vertical-scroll-proportion="-3.2142856" vertical-offset="0" max-vertical-offset="522">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/volley/src/com/android/volley/toolbox/ImageRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="57" selection-start="5183" selection-end="5183" vertical-scroll-proportion="0.0" vertical-offset="1611" max-vertical-offset="3492">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Develop/Android/sdk/sources/android-17/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10332" column="16" selection-start="401033" selection-end="401033" vertical-scroll-proportion="0.33203885" vertical-offset="184041" max-vertical-offset="329328">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/VolleyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="51" selection-start="3741" selection-end="3741" vertical-scroll-proportion="0.0" vertical-offset="1172" max-vertical-offset="2502">
+        <state line="51" column="12" selection-start="1702" selection-end="1702" vertical-scroll-proportion="0.0" vertical-offset="347" max-vertical-offset="1728">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2452#3056#0" expanded="true" />
+            <element signature="e#3045#3046#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/VolleyApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="54" selection-start="3050" selection-end="3050" vertical-scroll-proportion="0.0" vertical-offset="1157" max-vertical-offset="1944">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VolleySimpleSample/src/main/java/com/example/volleysimplesample/GalleryAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="47" selection-start="4248" selection-end="4248" vertical-scroll-proportion="0.53367877" vertical-offset="1959" max-vertical-offset="2538">
+        <state line="132" column="65" selection-start="4003" selection-end="4003" vertical-scroll-proportion="0.5198618" vertical-offset="1589" max-vertical-offset="2772">
           <folding>
-            <element signature="e#1365#1900#0" expanded="true" />
-            <element signature="e#1889#1890#0" expanded="true" />
+            <element signature="e#4224#4425#0" expanded="true" />
+            <element signature="e#4414#4415#0" expanded="true" />
+            <element signature="e#4458#4626#0" expanded="true" />
+            <element signature="e#4615#4616#0" expanded="true" />
           </folding>
         </state>
       </provider>

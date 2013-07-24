@@ -1,14 +1,12 @@
 package com.example.volleysimplesample;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
-import android.content.Context;
-import android.graphics.Bitmap;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -20,7 +18,6 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.Response.Listener;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.volleysimplesample.cmn.SearchResponse;
 
@@ -29,14 +26,13 @@ import org.json.JSONObject;
 public class VolleyActivity extends Activity {
 
     private static final String LOG = "LOGGY";
-    public static final Object IMAGE_TAG = new Object();
 
     private ListView mListView;
     protected GalleryAdapter mAdapter;
     private MenuItem mRefreshMenu;
     private RequestQueue mQueue;
-    private int mTotalLoadedImgs;
 
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     private void startLoadingAnim() {
         if (mRefreshMenu != null) {
             Log.i(LOG, "===== start loading");
@@ -48,6 +44,7 @@ public class VolleyActivity extends Activity {
         }
     }
 
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     private void stopLoadingAnim() {
         if (mRefreshMenu != null) {
             Log.i(LOG, "===== stop loading");
@@ -75,8 +72,7 @@ public class VolleyActivity extends Activity {
     }
 
     private void refreshData() {
-        String url = "https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=android";
-        JsonObjectRequest jsonRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Listener<JSONObject>() {
+        JsonObjectRequest jsonRequest = new JsonObjectRequest(Request.Method.GET, Constants.BASE_URL, null, new Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 SearchResponse responseObj = VolleyApp.getGsonInstance().fromJson(response.toString(), SearchResponse.class);
@@ -94,13 +90,14 @@ public class VolleyActivity extends Activity {
                 stopLoadingAnim();
             }
         });
-        jsonRequest.setTag(IMAGE_TAG);
+
+        jsonRequest.setTag(Constants.IMAGE_TAG);
         mQueue.add(jsonRequest);
     }
 
     public void onStop() {
         super.onStop();
-        mQueue.cancelAll(IMAGE_TAG);
+        mQueue.cancelAll(Constants.IMAGE_TAG);
         stopLoadingAnim();
     }
 
@@ -108,33 +105,6 @@ public class VolleyActivity extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.volley, menu);
         return true;
-    }
-
-
-
-    public void requestImage(final ImageView niv, final String imgUrl, final int len) {
-        ImageRequest request = new ImageRequest(imgUrl, new Response.Listener<Bitmap>() {
-            @Override
-            public void onResponse(Bitmap bm) {
-                niv.setImageBitmap(bm);
-                mTotalLoadedImgs++;
-                if (len == mTotalLoadedImgs) {
-                    stopLoadingAnim();
-                    mTotalLoadedImgs = 0;
-                }
-            }
-        }, 0, 0, Bitmap.Config.ARGB_8888, new Response.ErrorListener() {
-            public void onErrorResponse(VolleyError arg0) {
-                arg0.printStackTrace();
-                mTotalLoadedImgs++;
-                if (len == mTotalLoadedImgs) {
-                    stopLoadingAnim();
-                    mTotalLoadedImgs = 0;
-                }
-            }
-        });
-        request.setTag(IMAGE_TAG);
-        VolleyApp.getRequestQueue().add(request);
     }
 
     @Override

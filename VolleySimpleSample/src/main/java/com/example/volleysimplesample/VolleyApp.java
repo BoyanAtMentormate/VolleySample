@@ -14,7 +14,6 @@ import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
 
 public class VolleyApp extends Application {
 
@@ -22,12 +21,8 @@ public class VolleyApp extends Application {
     private static RequestQueue sRequestQueue;
     private static ImageLoader sImageLoader;
 
-    private static final int DEFAULT_MAX_CACHE_LIMIT = 5 * 1024 * 1024;
-
     private ImageLoader.ImageCache mImageCache;
     private ImageLoader.ImageCache mDiskCache;
-
-    private boolean mUseDiskCache = false;
 
     @Override
     public void onCreate() {
@@ -53,23 +48,15 @@ public class VolleyApp extends Application {
             }
         };
 
-        File cacheDir = getCacheDir();
-        if(!cacheDir.exists() && !cacheDir.canWrite() && !cacheDir.canRead()) {
-            // oops, can't use disk cache fallback to memory
-            mUseDiskCache = false;
-        }
-
         mDiskCache = new ImageLoader.ImageCache() {
-            private final DiskBasedCache mCache = new DiskBasedCache(getCacheDir(), DEFAULT_MAX_CACHE_LIMIT);
-            private final Bitmap.CompressFormat COMPRESS_FORMAT = Bitmap.CompressFormat.PNG;
-            private final int COMPRESS_QUALITY = 70;
+            private final DiskBasedCache mCache = new DiskBasedCache(getCacheDir(), Constants.DEFAULT_MAX_CACHE_LIMIT);
 
             @Override
             public void putBitmap(String url, Bitmap bitmap) {
                 Cache.Entry entry = new Cache.Entry();
                 entry.data = getImageBytes(bitmap);
-                entry.softTtl = 3 * 60 * 1000; // 3min
-                entry.ttl = 5 * 60 * 1000; // 5 min
+                entry.softTtl = Constants.DISK_CACHE_SOFT_TTL; // 3min
+                entry.ttl = Constants.DISK_CACHE_TTL; // 5 min
                 entry.etag = url;
 
                 mCache.put(url, entry);
@@ -89,7 +76,7 @@ public class VolleyApp extends Application {
 
             private byte[] getImageBytes(Bitmap bitmap) {
                 ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                bitmap.compress(COMPRESS_FORMAT, COMPRESS_QUALITY, stream);
+                bitmap.compress(Constants.COMPRESS_FORMAT, Constants.COMPRESS_QUALITY, stream);
                 return stream.toByteArray();
             }
 
@@ -99,7 +86,7 @@ public class VolleyApp extends Application {
         };
 
         // can't be simpler than this, really I tried
-        sImageLoader = new ImageLoader(sRequestQueue, mUseDiskCache ? mDiskCache : mImageCache);
+        sImageLoader = new ImageLoader(sRequestQueue, Constants.USE_DISK_CACHE ? mDiskCache : mImageCache);
     }
 
     public static ImageLoader getImageLoader() {
